@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React 1st Glance</title>
+    <link rel="stylesheet" href="../examples/shared/css/base.css" />
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      Hello Container
+    </div>
+    <script type="text/babel">
+      var StartComponent = React.createClass({
+        render: function(){
+          return (
+            <h1>Welcome React Using Components</h1>
+          );
+        }
+      });
+//     ReactDOM.render(
+//        React.createElement('h1', null, 'Hello Welcome to React'),
+//        document.getElementById('container')
+//      );
+      ReactDOM.render(
+        <StartComponent/>,
+        document.getElementById('container')
+      );
+    </script>
+  </body>
+</html>
